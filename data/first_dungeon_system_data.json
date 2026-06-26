@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "dungeon": {
+    "id": "mossy_catacombs",
+    "name": "Мшистые Катакомбы",
+    "floors": 3,
+    "theme": ["влажные руины", "грибы", "слизни", "кристаллы", "старые ловушки", "слабая некромантия"]
+  },
+  "sigils": [
+    {"id":"fire","name":"Огонь","strongAgainst":["nature","ice","shadow"],"weakAgainst":["water","earth","stone"],"status":"burn","statBonuses":["MAG","ATK"]},
+    {"id":"water","name":"Вода","strongAgainst":["fire","stone","metal"],"weakAgainst":["lightning","nature","ice"],"status":"wet","statBonuses":["HP","INT"]},
+    {"id":"earth","name":"Земля","strongAgainst":["lightning","fire","metal"],"weakAgainst":["water","ice","nature"],"status":"armor_crack","statBonuses":["DEF","HP"]},
+    {"id":"air","name":"Воздух","strongAgainst":["earth","poison","ghost"],"weakAgainst":["lightning","ice","stone"],"status":"initiative_shift","statBonuses":["SPD"]},
+    {"id":"ice","name":"Лёд","strongAgainst":["air","nature","water"],"weakAgainst":["fire","stone","metal"],"status":"frost","statBonuses":["INT","DEF"]},
+    {"id":"lightning","name":"Молния","strongAgainst":["water","air","metal"],"weakAgainst":["earth","nature"],"status":"shock","statBonuses":["SPD","MAG"]},
+    {"id":"nature","name":"Природа","strongAgainst":["earth","water","stone"],"weakAgainst":["fire","poison","ice"],"status":"rooted","statBonuses":["HP","INT"]},
+    {"id":"metal","name":"Металл","strongAgainst":["ice","poison","light"],"weakAgainst":["fire","lightning","earth"],"status":"tempered","statBonuses":["DEF","ATK"]},
+    {"id":"poison","name":"Яд","strongAgainst":["nature","light","psychic"],"weakAgainst":["earth","air","metal"],"status":"poison","statBonuses":["MAG","SPD"]},
+    {"id":"ghost","name":"Призрак","strongAgainst":["psychic","shadow","metal"],"weakAgainst":["light","nature"],"status":"fear","statBonuses":["MAG","INT"]},
+    {"id":"psychic","name":"Психика","strongAgainst":["shadow","metal","air"],"weakAgainst":["shadow","ghost","poison"],"status":"confusion","statBonuses":["INT","MAG"]},
+    {"id":"light","name":"Свет","strongAgainst":["shadow","ghost","poison"],"weakAgainst":["shadow","metal"],"status":"cleanse","statBonuses":["INT","HP"]},
+    {"id":"shadow","name":"Тень","strongAgainst":["psychic","light","nature"],"weakAgainst":["light","fire"],"status":"shadow_mark","statBonuses":["ATK","SPD"]},
+    {"id":"stone","name":"Камень","strongAgainst":["fire","ice","air"],"weakAgainst":["water","nature","earth"],"status":"heavy","statBonuses":["DEF","HP"]}
+  ],
+  "rarities": [
+    {"id":"common","name":"Обычная","captureModifier":1.0,"wildInFirstDungeon":true},
+    {"id":"uncommon","name":"Необычная","captureModifier":0.75,"wildInFirstDungeon":true},
+    {"id":"rare","name":"Редкая","captureModifier":0.45,"wildInFirstDungeon":"very_rare"},
+    {"id":"epic","name":"Эпическая","captureModifier":0.25,"wildInFirstDungeon":false},
+    {"id":"legendary","name":"Легендарная","captureModifier":0.05,"wildInFirstDungeon":false},
+    {"id":"mythic","name":"Мифическая","captureModifier":0.02,"wildInFirstDungeon":false}
+  ],
+  "species": [
+    {"id":"slime","line":"Слизень","stages":["Каплик","Мшистый слизень","Слизневая хранительница"],"rarity":"common","sigils":["water","nature"],"role":"Танк-реген","baseStats":{"HP":42,"ATK":8,"DEF":10,"MAG":8,"INT":9,"SPD":6},"stage1Skills":["Плеск","Упругое тело"],"ultimate":"Живая купель","sigilUnlock":"stage_2_lvl_8","starter":true},
+    {"id":"bat","line":"Летучая мышь","stages":["Пискокрыл","Ночной пискокрыл","Крылатая сумеречница"],"rarity":"common","sigils":["air","shadow"],"role":"Скорость, антисвап","baseStats":{"HP":30,"ATK":10,"DEF":6,"MAG":8,"INT":7,"SPD":15},"stage1Skills":["Укус","Визг"],"ultimate":"Ночной вихрь","sigilUnlock":"stage_2_lvl_9","starter":true},
+    {"id":"mushroom","line":"Гриб","stages":["Споровик","Ядовитый споровик","Ведьма-грибница"],"rarity":"common","sigils":["nature","poison"],"role":"DoT, контроль","baseStats":{"HP":36,"ATK":6,"DEF":8,"MAG":12,"INT":11,"SPD":5},"stage1Skills":["Спора","Тычок"],"ultimate":"Ведьмин круг спор","sigilUnlock":"stage_2_lvl_8","starter":true},
+    {"id":"rat","line":"Крыса","stages":["Рунная крыса","Крыса-собиратель","Хвостатая плутовка"],"rarity":"common","sigils":["earth","shadow"],"role":"Быстрый физический урон","baseStats":{"HP":32,"ATK":12,"DEF":7,"MAG":5,"INT":6,"SPD":14},"stage1Skills":["Цапнуть","Спрятаться"],"ultimate":"Кража судьбы","sigilUnlock":"stage_2_lvl_10"},
+    {"id":"mossling","line":"Моховик","stages":["Мохляк","Древний мохляк","Моховая друидесса"],"rarity":"common","sigils":["nature","earth"],"role":"Поддержка, корни","baseStats":{"HP":40,"ATK":7,"DEF":11,"MAG":9,"INT":12,"SPD":4},"stage1Skills":["Корешок","Лечение росой"],"ultimate":"Лес под камнем","sigilUnlock":"stage_2_lvl_9"},
+    {"id":"wisp","line":"Огонёк","stages":["Тусклый огонёк","Светляк руин","Лампадная жрица"],"rarity":"uncommon","sigils":["light","fire"],"role":"Чистка, магический урон","baseStats":{"HP":28,"ATK":5,"DEF":5,"MAG":15,"INT":13,"SPD":11},"stage1Skills":["Искра","Очищение"],"ultimate":"Рассвет в катакомбах","sigilUnlock":"stage_1_primary_second_lvl_11"},
+    {"id":"crab","line":"Пещерный краб","stages":["Камнекраб","Панцирный краб","Крабья стражница"],"rarity":"uncommon","sigils":["stone","water"],"role":"Физический танк","baseStats":{"HP":46,"ATK":10,"DEF":15,"MAG":4,"INT":8,"SPD":3},"stage1Skills":["Клешня","Панцирь"],"ultimate":"Приливная крепость","sigilUnlock":"stage_2_lvl_10"},
+    {"id":"sprite","line":"Фея плесени","stages":["Плесенка","Фея спор","Споровая принцесса"],"rarity":"uncommon","sigils":["poison","air"],"role":"Дебаффы, скорость","baseStats":{"HP":29,"ATK":6,"DEF":6,"MAG":13,"INT":10,"SPD":16},"stage1Skills":["Едкая пыль","Порхание"],"ultimate":"Танец токсичных крыльев","sigilUnlock":"stage_1_primary_second_lvl_10"},
+    {"id":"golem","line":"Малый голем","stages":["Глиняшка","Рунный голем","Глиняная кукла-страж"],"rarity":"uncommon","sigils":["earth","metal"],"role":"Броня, контратаки","baseStats":{"HP":50,"ATK":11,"DEF":16,"MAG":3,"INT":7,"SPD":2},"stage1Skills":["Удар глиной","Стойка"],"ultimate":"Печать древней стены","sigilUnlock":"stage_2_lvl_12"},
+    {"id":"newt","line":"Тритон","stages":["Родниковый тритон","Ледяной тритон","Тритонья криомантка"],"rarity":"uncommon","sigils":["water","ice"],"role":"Контроль скорости","baseStats":{"HP":35,"ATK":8,"DEF":8,"MAG":12,"INT":10,"SPD":9},"stage1Skills":["Брызги","Холодок"],"ultimate":"Абсолютная заводь","sigilUnlock":"stage_2_lvl_11"},
+    {"id":"fox","line":"Лиса","stages":["Рунолис","Пламенный рунолис","Лисья кицунэ-искра"],"rarity":"rare","sigils":["fire","light"],"role":"Стартер/магический керри","baseStats":{"HP":34,"ATK":9,"DEF":7,"MAG":14,"INT":10,"SPD":13},"stage1Skills":["Искра","Хитрый прыжок"],"ultimate":"Девять малых солнц","sigilUnlock":"stage_1_primary_second_lvl_12"},
+    {"id":"beetle","line":"Жук","stages":["Бронежук","Грозовой бронежук","Жучья рыцарь-громница"],"rarity":"rare","sigils":["metal","lightning"],"role":"Бруизер","baseStats":{"HP":44,"ATK":12,"DEF":13,"MAG":9,"INT":8,"SPD":7},"stage1Skills":["Роговой удар","Заряд"],"ultimate":"Рыцарский разряд","sigilUnlock":"stage_2_lvl_12"},
+    {"id":"shade","line":"Тень","stages":["Малая тень","Зеркальная тень","Теневая кукловодка"],"rarity":"rare","sigils":["shadow","ghost"],"role":"Вампиризм, страх","baseStats":{"HP":31,"ATK":11,"DEF":5,"MAG":14,"INT":12,"SPD":12},"stage1Skills":["Теневой укол","Шёпот"],"ultimate":"Кукольный театр душ","sigilUnlock":"stage_1_primary_second_lvl_13"},
+    {"id":"mandrake","line":"Мандрагора","stages":["Корешок-крикун","Сонная мандрагора","Мандрагора-колыбельная"],"rarity":"rare","sigils":["nature","psychic"],"role":"Сон, контроль","baseStats":{"HP":38,"ATK":5,"DEF":9,"MAG":13,"INT":15,"SPD":6},"stage1Skills":["Крик","Корни"],"ultimate":"Колыбель корней","sigilUnlock":"stage_2_lvl_12"},
+    {"id":"boss_guardian","line":"Босс","stages":["Печатный страж","Печатный страж","Хранительница печати"],"rarity":"legendary","sigils":["stone","light"],"role":"Босс этажа","baseStats":{"HP":80,"ATK":14,"DEF":18,"MAG":14,"INT":14,"SPD":5},"stage1Skills":["Печать","Каменный луч"],"ultimate":"Запрет катакомб","sigilUnlock":"boss_only","capturable":false}
+  ],
+  "encounterTables": [
+    {"floor":1,"room":"combat","weights":{"slime":22,"bat":18,"mushroom":18,"rat":16,"mossling":14,"wisp":4,"crab":4,"sprite":2,"golem":1,"newt":1}},
+    {"floor":1,"room":"hard_combat","weights":{"slime":14,"bat":12,"mushroom":12,"rat":10,"mossling":10,"wisp":8,"crab":8,"sprite":8,"golem":8,"newt":6,"fox":2,"beetle":1,"shade":1}},
+    {"floor":2,"room":"combat","weights":{"slime":16,"bat":14,"mushroom":14,"rat":12,"mossling":12,"wisp":8,"crab":8,"sprite":6,"golem":5,"newt":4,"beetle":1}},
+    {"floor":2,"room":"hard_combat","weights":{"slime":10,"bat":10,"mushroom":10,"rat":8,"mossling":8,"wisp":10,"crab":10,"sprite":10,"golem":10,"newt":8,"fox":2,"beetle":2,"shade":1,"mandrake":1}},
+    {"floor":2,"room":"elite","weights":{"wisp":18,"crab":16,"sprite":16,"golem":18,"newt":12,"fox":5,"beetle":7,"shade":5,"mandrake":3}},
+    {"floor":3,"room":"combat","weights":{"slime":10,"bat":10,"mushroom":12,"rat":9,"mossling":10,"wisp":10,"crab":8,"sprite":8,"golem":7,"newt":6,"fox":2,"beetle":3,"shade":3,"mandrake":2}},
+    {"floor":3,"room":"hard_combat","weights":{"slime":7,"bat":7,"mushroom":8,"rat":7,"mossling":7,"wisp":11,"crab":10,"sprite":10,"golem":10,"newt":9,"fox":4,"beetle":5,"shade":4,"mandrake":1}},
+    {"floor":3,"room":"elite","weights":{"wisp":14,"crab":14,"sprite":14,"golem":16,"newt":12,"fox":6,"beetle":10,"shade":8,"mandrake":6}}
+  ],
+  "eggTables": [
+    {"id":"dull_egg","name":"Тусклое яйцо","sources":["floor_1","floor_2"],"categoryWeights":{"resources":65,"items":25,"materials":9,"creature":1},"pity":"20 openings guarantee uncommon+ creature"},
+    {"id":"mystic_egg","name":"Мистическое яйцо","sources":["floor_3","events"],"categoryWeights":{"resources":45,"items":30,"materials":20,"creature":5},"pity":"15 openings guarantee rare+ reward"},
+    {"id":"radiant_egg","name":"Сияющее яйцо","sources":["bosses","elites","achievements"],"categoryWeights":{"resources":30,"items":30,"materials":30,"creature":10},"pity":"10 openings guarantee rare+ creature or catalyst"},
+    {"id":"ancient_egg","name":"Древнее яйцо","sources":["secrets","final_chains"],"categoryWeights":{"resources":20,"items":25,"materials":35,"creature":20},"pity":"8 openings guarantee epic+ reward"}
+  ]
+}
